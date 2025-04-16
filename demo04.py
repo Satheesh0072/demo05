@@ -4,7 +4,7 @@ import pandas as pd
 # Load and clean Excel data
 @st.cache_data
 def load_data():
-    df = pd.read_excel("Restaurant_Google sheet001.xlsx", sheet_name="Sheet1", skiprows=3)
+    df = pd.read_excel("C:\Users\Hamada Salim G Trd\Documents\project1\Restaurant_Google sheet001.xlsx", sheet_name="Sheet1", skiprows=3)
     df = df.dropna(subset=["Dish"])
     df.columns = df.columns.map(str)
     df["Weekly Orders"] = pd.to_numeric(df["Weekly Orders"], errors='coerce')
